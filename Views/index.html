@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recognizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/recognizer?type=">
+
+        <div class="m-3">
+            <label for="type">Czego szukasz?</label>
+            <select name="type" required class="mx-2">
+                <option value="background">Tło</option>
+                <option value="bicycle">Rower</option>
+                <option value="aeroplane">Samolot</option>
+                <option value="bird">Ptak</option>
+                <option value="boat">Łódź</option>
+                <option value="bottle">Butelka</option>
+                <option value="bus">Bus</option>
+                <option value="car" selected="selected">Samochód</option>
+                <option value="cat">Kot</option>
+                <option value="chair">Krzesło</option>
+                <option value="cow">Krowa</option>
+                <option value="diningtable">Stoł</option>
+                <option value="dog">Pies</option>
+                <option value="horse">Koń</option>
+                <option value="motorbike">Motocykl</option>
+                <option value="person">Osoba</option>
+                <option value="pottedplant">Kwiatek</option>
+                <option value="sheep">Owca</option>
+                <option value="sofa">Sofa</option>
+                <option value="train">Pociąg</option>
+                <option value="tvmonitor">Telewizor</option>
+            </select>
+        </div>
+        <div class="mx-3 mb-3">
+            <label for="img">Wybierz zdjęcie</label>
+            <input type="file" id="img" name="img" accept="image/*" class="mx-2">
+        </div>
+        <input type="submit" value="Szukaj" class="mx-3" />
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
