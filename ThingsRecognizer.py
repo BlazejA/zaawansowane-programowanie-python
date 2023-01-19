@@ -15,8 +15,8 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "sofa", "train", "tvmonitor"]
 
 
-def Recognize(type: str):
-    obraz = cv2.imread('Files/Carpark.jpg')
+def Recognize(type: str, img):
+    obraz = cv2.imread(img)
     obraz = imutils.resize(obraz, width=600)
 
     (H, W) = obraz.shape[:2]

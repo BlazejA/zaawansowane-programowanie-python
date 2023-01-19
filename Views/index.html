@@ -8,6 +8,7 @@
     <title>Recognizer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="static/style.css" rel="stylesheet">
 
 </head>
 
@@ -15,10 +16,10 @@
 <div class="panel">
     <div class="panel-heading">Szukaj obiektu na zdjęciu</div>
     <div class="panel-body">
-        <form action="/recognizer?type=">
+        <form action="/recognizer/{{type}}" method="post" enctype="multipart/form-data" id="photoform">
             <div class="m-3">
                 <label for="type">Czego szukasz?</label>
-                <select name="type" required class="mx-2">
+                <select id="type" name="type" class="mx-2" form="photoform" required>
                     <option value="background">Tło</option>
                     <option value="bicycle">Rower</option>
                     <option value="aeroplane">Samolot</option>
@@ -44,10 +45,10 @@
             </div>
             <div class="mx-3 mb-3">
                 <label for="img">Wybierz zdjęcie</label>
-                <input type="file" id="img" name="img" accept="image/*" class="mx-2">
+                <input type="file" id="img" name="img" accept="image/*" class="mx-2" required>
             </div>
             <div class="text-center">
-              <input type="submit" value="Szukaj" class="mx-3"/>
+                <input type="submit" value="Szukaj" class="mx-3"/>
             </div>
         </form>
     </div>
